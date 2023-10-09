@@ -14,14 +14,20 @@
 
 /* End of CSS reset */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#F00000, #DC281E);
+    background: linear-gradient(#222, #888);
     font-family: sans-serif;
 }
+
+/* General Styles */
 
 button:hover {
     cursor: pointer;
