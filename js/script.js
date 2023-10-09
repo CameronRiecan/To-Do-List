@@ -1,6 +1,5 @@
 // Main JavaScript file for To Do List project
 
-// select everything
 // select the todo-form
 const todoForm = document.querySelector('.todo-form');
 // select the input box
@@ -115,4 +114,3 @@ todoItemsList.addEventListener('click', function(e) {
         deleteTodo(e.target.parentElement.getAttribute('data-key'));
     }
 });
-
