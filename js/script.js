@@ -79,6 +79,26 @@ function getFromLocalStorage() {
     }
 }
 
+// toggle function for value to completed or not completed
+function toggle(id) {
+    todos.forEach(function(item) {
+        if (item.id == id) {
+            item.completed = !item.completed;
+        }
+    });
+
+    addToLocalStorage(todos);
+}
+
+// deletes a to do from todos array and then updated the local storage to render updated list
+function deleteTodo(id) {
+    todos = todos.filter(function(item) {
+        return item.id != id;
+    });
+
+    addToLocalStorage(todos);
+}
+
 // initially get everything from localStorage
 getFromLocalStorage();
 
