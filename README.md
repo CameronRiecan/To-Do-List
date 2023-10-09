@@ -1,8 +1,6 @@
 # To-Do List Web Application
 
-A simple web-based to-do list application to help you organize your tasks and stay productive. You can add, check off, and delete tasks with ease.
-
-![To-Do List]
+A simple web-based to-do list application to help you organize your tasks and stay productive. You can add, check off, and delete tasks with ease. Made using HTML, CSS, and vanilla JavaScript.
 
 ## Table of Contents
 
