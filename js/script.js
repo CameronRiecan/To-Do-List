@@ -34,12 +34,12 @@ function addTodo(item) {
 }
 
 // function to render given todos to screen
-function renderTodos(todos) {
+function renderTodos( todos) {
     // clear inside of ul with todo items class
     todoItemsList.innerHTML = '';
 
     todos.forEach(item => {
-        const checked = item.competed ? 'checked' : null;
+        const checked = item.completed ? 'checked' : null;
 
 
         const li = document.createElement('li');
