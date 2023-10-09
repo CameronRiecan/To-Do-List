@@ -27,7 +27,7 @@ function addTodo(item) {
         };
 
         todos.push(todo);
-        renderTodos(todos);
+        addToLocalStorage(todos); //calls function for local storage which also renders it
 
         todoInput.value = ''; // clears the input value after
     }
@@ -58,4 +58,12 @@ function renderTodos( todos) {
 
         todoItemsList.append(li);
     });
+}
+
+// function to add todos to local storage where data has no expiration
+function addToLocalStorage(todos) {
+    // convert the array to string then store it.
+    localStorage.setItem('todos', JSON.stringify(todos));
+    // render them to screen
+    renderTodos(todos);
 }
