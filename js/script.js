@@ -35,6 +35,9 @@ function addTodo(item) {
 
 // function to render given todos to screen
 function renderTodos( todos) {
+     // Sort the todos so that checked items come after unchecked items
+     todos.sort((a, b) => (a.completed === b.completed ? 0 : a.completed ? 1 : -1));
+
     // clear inside of ul with todo items class
     todoItemsList.innerHTML = '';
 
