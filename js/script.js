@@ -67,3 +67,29 @@ function addToLocalStorage(todos) {
     // render them to screen
     renderTodos(todos);
 }
+
+// function helps to get everything from local storage
+function getFromLocalStorage() {
+    const reference = localStorage.getItem('todos');
+    // if reference exists
+    if (reference) {
+      // converts back to array and store it in todos array
+      todos = JSON.parse(reference);
+      renderTodos(todos);
+    }
+}
+
+// initially get everything from localStorage
+getFromLocalStorage();
+
+// Event Listener for click events for delete button
+todoItemsList.addEventListener('click', function(e) {
+    if (e.target.type === 'checkbox') {
+        toggle(e.target.parentElement.getAttribute('data-key'));
+    }
+
+    if (e.target.classList.contains('delete-button')) {
+        deleteTodo(e.target.parentElement.getAttribute('data-key'));
+    }
+});
+
