@@ -29,16 +29,9 @@ body {
 
 /* General Styles */
 
-button:hover {
-    cursor: pointer;
-    background-color: #73E831;
-}
-
 ul {
     list-style-type: none; /* get rid of bullet points on side of list items */
 }
-
-/* Common Style Ends */
 
 /* container */
 .container {
@@ -52,6 +45,8 @@ ul {
 h1 {
     color: #fff;
     font-size: 3rem;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
 }
 
 /* todo-form */
@@ -70,13 +65,21 @@ h1 {
 }
 
 .add-button {
-    background-color: #0000ff;
+    background-color: #464691;
     color: #fff;
-    border: none;
+    border: 1px solid #fff;
     outline: none;
     border-radius: 5px;
     padding: 7px;
     font-size: 1.2rem;
+    transition: background-color 0.4s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #222;
+    transition: background-color 0.4s ease;
 }
 
 /* todo-items */
@@ -101,15 +104,52 @@ h1 {
     border-bottom-right-radius: 7px;
 }
 
-/* item style end */
-
 .checkbox {
     margin-right: 10px;
 }
 
+/* Reset the native checkbox input styles */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid #000; /* Black border */
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Style the checkmark */
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #464691; /* Purple checkmark */
+    background-color: transparent; /* Remove background color */
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+/* Change the border color when the checkbox is checked */
+input[type="checkbox"]:checked {
+    border-color: #464691; /* Purple border when checked */
+}
+
+/* Show the checkmark when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
 .delete-button {
     float: right;
-    background-color: #dc143c;
+    background-color:  #dc143c;
     border: none;
     outline: none;
     border-radius: 7px;
@@ -117,6 +157,10 @@ h1 {
     margin-left: 10px;
     font-size: 1.1rem;
     font-weight: 550;
+}
+
+.delete-button:hover {
+    background-color: #73E831;
 }
 
 /* applied when the todo item is checked */
