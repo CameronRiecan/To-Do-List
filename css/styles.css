@@ -190,4 +190,9 @@ input[type="checkbox"]:checked::before {
         align-items: center;
         text-align: center;
     }
+
+    /* when button gets pushed below input, makes sure there is space above button */
+    .add-button {
+        margin-top: 1rem;
+    }
 }
