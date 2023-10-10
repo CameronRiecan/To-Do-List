@@ -191,6 +191,10 @@ input[type="checkbox"]:checked::before {
         text-align: center;
     }
 
+    li {
+        text-align: left;
+    }
+
     /* when button gets pushed below input, makes sure there is space above button */
     .add-button {
         margin-top: 1rem;
