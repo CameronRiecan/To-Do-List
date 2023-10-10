@@ -168,3 +168,26 @@ input[type="checkbox"]:checked::before {
 .checked {
     text-decoration: line-through;
 }
+
+/* Add a media query for screens smaller than 1024px (mobile and medium size) */
+@media screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .container {
+        min-width: auto; /* Remove minimum width */
+    }
+
+    /* Adjust the width of the todo-input */
+    .todo-input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Center-align text in the container */
+    .container {
+        align-items: center;
+        text-align: center;
+    }
+}
