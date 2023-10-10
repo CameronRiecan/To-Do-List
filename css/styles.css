@@ -176,7 +176,7 @@ input[type="checkbox"]:checked::before {
     }
 
     .container {
-        min-width: auto; /* Remove minimum width */
+        min-width: 0; /* Remove minimum width */
     }
 
     /* Adjust the width of the todo-input */
