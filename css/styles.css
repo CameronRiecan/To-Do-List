@@ -150,6 +150,7 @@ input[type="checkbox"]:checked::before {
 .delete-button {
     float: right;
     background-color:  #dc143c;
+    color: #000;
     border: none;
     outline: none;
     border-radius: 7px;

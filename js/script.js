@@ -76,8 +76,8 @@ function getFromLocalStorage() {
     // if reference exists
     if (reference) {
       // converts back to array and store it in todos array
-      todos = JSON.parse(reference);
-      renderTodos(todos);
+    todos = JSON.parse(reference);
+    renderTodos(todos);
     }
 }
 
